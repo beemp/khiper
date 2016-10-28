@@ -1,0 +1,32 @@
+html
+  head
+    //- Imports
+    link(href="/public/lib/bootstrap.min.css" rel='stylesheet')
+    script(src="/public/lib/bootstrap.min.js")
+    script(src="/public/lib/jquery-3.1.1.min.js")
+
+    //- My Imports
+    link(href="/public/style/page.css" rel='stylesheet')
+    script(src="/public/script/page.js")
+
+    title #{title}'s pug example
+  body
+    include layouts/header
+
+    div.header
+      div.title
+        a(class="glyphicon glyphicon-search")
+        a(class="glyphicon glyphicon-file")
+
+
+    br
+
+    div.article("style='background-color: #e6e6e6;'")
+      include previous
+
+
+
+    //-   h1 #{message}
+    //-   button(onclick="handle_click()") click
+
+    include layouts/footer
